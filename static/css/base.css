@@ -7,11 +7,11 @@ body {
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
-    font-family: 'Lato';
+    font-family: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
     background-color: black;
 }
 
-/* from Bulma */
+/* From Bulma */
 .icon {
     align-items: center;
     display: inline-flex;
@@ -59,11 +59,14 @@ body {
 
 .text-white {
     color: #fff !important;
-    font-weight: normal;
 }
 
 .border-white {
     border: 1px solid #fff !important;
+}
+
+.bg-black {
+    background: #000 !important;
 }
 
 /* -------------------------------- Media Queries */
