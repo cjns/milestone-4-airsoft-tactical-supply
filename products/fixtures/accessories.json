@@ -1,0 +1,22 @@
+[
+    {
+      "pk": 1,
+      "model": "products.accessory",
+      "fields": {
+        "name": "Tokyo Marui - MP, 72 Round Magazine",
+        "price": 35.00,
+        "image": "../../media/mp5-mag-1.jpeg",
+        "description": "Spare magazine for the Tokyo Marui - MP"
+      }
+    },
+    {
+        "pk": 2,
+        "model": "products.accessory",
+        "fields": {
+          "name": "Tokyo Marui - MP, 200 Round High Capacity Magazine",
+          "price": 40.00,
+          "image": "../../media/mp5-mag-2.jpeg",
+          "description": "Spare high capacity magazine for the Tokyo Marui - MP"
+        }
+      }
+]

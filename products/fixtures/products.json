@@ -1,0 +1,17 @@
+[
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp01",
+            "name": "Tokyo Marui MP5-SD6",
+            "description": "Tokyo Marui MP-SD Next Generation Recoil Shock Electric Airsoft Rifle",
+            "price": 499.99,
+            "category": 2,
+            "image": "../../media/mp5-1.jpg",
+            "product_spec": 1,
+            "manufacturer": 1,
+            "accessories": [1, 2]
+        }
+    }
+]
