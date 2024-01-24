@@ -33,7 +33,6 @@ class Product(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2, validators=[MinValueValidator(1.00)])
     image = models.ImageField(null=True, blank=True)
-    product_spec = models.OneToOneField('Specification', on_delete=models.CASCADE, null=True, blank=True, related_name='related_product')
     manufacturer = models.ForeignKey(Manufacturer, on_delete=models.SET_NULL, null=True, blank=True)
     accessories = models.ManyToManyField('Accessory', blank=True, related_name='related_product')
 
@@ -42,7 +41,8 @@ class Product(models.Model):
     
 
 class Specification(models.Model):
-    length = models.DecimalField("Min Length (mm)", max_digits=6, decimal_places=0, null=True, blank=True)
+    related_product = models.OneToOneField(Product, on_delete=models.SET_NULL, null=True, blank=True, related_name='product_spec')
+    length = models.DecimalField("Length (mm)", max_digits=6, decimal_places=0, null=True, blank=True)
     weight = models.DecimalField("Weight (kg)", max_digits=6, decimal_places=2, null=True, blank=True)
     magazine_capacity = models.PositiveIntegerField("Magazine Capacity (rounds)", null=True, blank=True)
     muzzle_velocity = models.PositiveIntegerField("Muzzle Velocity (FPS)", null=True, blank=True)
@@ -50,8 +50,11 @@ class Specification(models.Model):
     ammunition_type = models.CharField("Ammunition Type", max_length=50, choices=(('bb', 'BB'), ('pellet', 'Pellet')), null=True, blank=True)
 
     def __str__(self):
-        return f"Specifications for {self.related_product.name}"
-    
+        if self.related_product:
+            return f"Specifications for {self.related_product.name}"
+        else:
+            return "Unlinked Specification"
+
 
 class Accessory(models.Model):
 

@@ -25,6 +25,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 class SpecificationAdmin(admin.ModelAdmin):
     list_display = (
+        'related_product',
         'length',
         'weight',
         'magazine_capacity',
