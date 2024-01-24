@@ -34,5 +34,4 @@ Cons:
 - Code Institute
 - [Boutique Ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1/tree/e3c29afef63a8e5a8dae3fdc6b1277eb32206dbc/media)
 - [Land Warrior Airsoft](https://www.landwarriorairsoft.com/)
-    
 - [Airsoftdirect.uk.com](https://airsoftdirect.uk.com/)

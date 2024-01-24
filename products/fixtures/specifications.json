@@ -10,5 +10,17 @@
             "power_system": "Electric",
             "ammunition_type": "BB"
         }
+    },
+    {
+        "pk": 2,
+        "model": "products.specification",
+        "fields": {
+            "length": 740,
+            "weight": 4.95,
+            "magazine_capacity": 35,
+            "muzzle_velocity": 290,
+            "power_system": "Gas",
+            "ammunition_type": "BB"
+        }
     }
 ]

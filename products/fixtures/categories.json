@@ -78,5 +78,13 @@
       "name": "ammunition",
       "friendly_name": "Ammunition"
     }
+  },
+  {
+    "pk": 11,
+    "model": "products.category",
+    "fields": {
+      "name": "pistols",
+      "friendly_name": "Pistols"
+    }
   }
 ]

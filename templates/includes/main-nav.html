@@ -17,13 +17,13 @@
                 Airsoft Guns
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="airsoft-guns-link">
-                <a href="" class="dropdown-item">Pistols</a>
-                <a href="" class="dropdown-item">Shotguns</a>
-                <a href="" class="dropdown-item">Submachine Guns</a>
-                <a href="" class="dropdown-item">Rifles</a>
-                <a href="" class="dropdown-item">Sniper Rifles</a>
-                <a href="" class="dropdown-item">Launchers</a>
-                <a href="" class="dropdown-item">All Airsoft Guns</a>
+                <a href="{% url 'products' %}?category=pistols" class="dropdown-item">Pistols</a>
+                <a href="{% url 'products' %}?category=shotguns" class="dropdown-item">Shotguns</a>
+                <a href="{% url 'products' %}?category=submachine_guns" class="dropdown-item">Submachine Guns</a>
+                <a href="{% url 'products' %}?category=rifles" class="dropdown-item">Rifles</a>
+                <a href="{% url 'products' %}?category=sniper_rifles" class="dropdown-item">Sniper Rifles</a>
+                <a href="{% url 'products' %}?category=launchers" class="dropdown-item">Launchers</a>
+                <a href="{% url 'products' %}?category=pistols,shotguns,sniper_rifles,launchers,submachine_guns,rifles" class="dropdown-item">All Airsoft Guns</a>
             </div>
         </li>
 

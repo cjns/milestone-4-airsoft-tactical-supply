@@ -4,7 +4,7 @@
         "model": "products.product",
         "fields": {
             "sku": "pp01",
-            "name": "Tokyo Marui MP5-SD6",
+            "name": "MP5-SD6",
             "description": "Tokyo Marui MP-SD Next Generation Recoil Shock Electric Airsoft Rifle",
             "price": 499.99,
             "category": 2,
@@ -12,6 +12,21 @@
             "product_spec": 1,
             "manufacturer": 1,
             "accessories": [1, 2]
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp02",
+            "name": "AKX Gas Blowback Rifle",
+            "description": "The Tokyo Marui AKX Gas Blowback Airsoft Rifle is a modernized version of the iconic AK47, renowned for its power, reliability, and affordability. Designed with a short barrel, folding stock, and M-Lok handguard, it suits various playstyles. Fueled by gas, it delivers authentic blowback action, while its adjustable hop-up enhances range and accuracy. Crafted with metal components, it ensures durability. The rifle includes a 35-round magazine, compatible with other Tokyo Marui AKM magazines. Its versatility extends to aftermarket accessories, allowing customization. For airsoft enthusiasts seeking realism and adaptability, the Tokyo Marui AKX is a top-tier choice.",
+            "price": 650,
+            "category": 1,
+            "image": "../../media/tm-akx.jpg",
+            "product_spec": 2,
+            "manufacturer": 1,
+            "accessories": null
         }
     }
 ]
