@@ -42,7 +42,7 @@ class Product(models.Model):
     
 
 class Specification(models.Model):
-    length = models.DecimalField("Min Length (mm)", max_digits=6, decimal_places=2, null=True, blank=True)
+    length = models.DecimalField("Min Length (mm)", max_digits=6, decimal_places=0, null=True, blank=True)
     weight = models.DecimalField("Weight (kg)", max_digits=6, decimal_places=2, null=True, blank=True)
     magazine_capacity = models.PositiveIntegerField("Magazine Capacity (rounds)", null=True, blank=True)
     muzzle_velocity = models.PositiveIntegerField("Muzzle Velocity (FPS)", null=True, blank=True)

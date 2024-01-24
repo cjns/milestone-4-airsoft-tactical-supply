@@ -83,9 +83,9 @@ body {
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
+    .container {
+        max-width: 80%;
+    }
 }
 
 /* fixed top navbar only on medium and up */
@@ -100,5 +100,66 @@ body {
 
     .header-container {
         padding-top: 164px;
+    }
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (min-width: 992px) and (max-width: 1094px) {
+    .header-container {
+        padding-top: 195px;
+    }
+
+    body {
+        height: calc(100vh - 195px);
+    }
+}
+
+@media (min-width: 592px) and (max-width: 991px) {
+    .header-container {
+        padding-top: 135px;
+    }
+
+    body {
+        height: calc(100vh - 135px);
+    }
+}
+
+@media (min-width: 408px) and (max-width: 591px) {
+    .header-container {
+        padding-top: 175px;
+    }
+
+    body {
+        height: calc(100vh - 175px);
+    }
+}
+
+@media (min-width: 352px) and (max-width: 407px) {
+    .header-container {
+        padding-top: 215px;
+    }
+
+    body {
+        height: calc(100vh - 215px);
+    }
+}
+
+@media (min-width: 328px) and (max-width: 351px) {
+    .header-container {
+        padding-top: 280px;
+    }
+
+    body {
+        height: calc(100vh - 280px);
+    }
+}
+
+@media (min-width: 320px) and (max-width: 327px) {
+    .header-container {
+        padding-top: 320px;
+    }
+
+    body {
+        height: calc(100vh - 320px);
     }
 }
