@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools%}
 
 {% block page_header %}
     <div class="container header-container">
@@ -31,6 +32,7 @@
                                     <th scope="col"></th>
                                     <th scope="col">Price</th>
                                     <th scope="col">Quantity</th>
+                                    <th scope="col">Update Quantity</th>
                                     <th scope="col">Subtotal</th>
                                 </tr>
                             </thead>
@@ -47,18 +49,25 @@
                                     <td class="py-3">
                                         <p class="my-0">£{{ item.product.price }}</p>
                                     </td>
-                                    <td class="py-3 w-25">
+                                    <td class="py-3">
                                         <p class="my-0">{{ item.quantity }}</p>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">£{{ item.product.price }}</p>
+                                        <form action="{% url 'update_cart' item.item_id %}" method="post">
+                                            {% csrf_token %}
+                                            <input type="number" name="quantity" min="0" max="99" value="{{ item.quantity }}">
+                                            <button type="submit">Update</button>
+                                        </form>
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                     </td>
                                 </tr>
                                 {% endfor %}
                                 <tr>
                                     <td colspan="5" class="pt-5 text-right">
                                         <h6><strong>Cart Total: £{{ total_cost|floatformat:2 }}</strong></h6>
-                                        <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
+                                        <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
                                         <h4 class="mt-4"><strong>Grand Total: £{{ total_cost_with_delivery|floatformat:2 }}</strong></h4>
                                         {% if free_delivery_delta > 0 %}
                                             <p class="mb-1 text-danger">
