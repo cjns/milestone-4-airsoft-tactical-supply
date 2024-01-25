@@ -6,3 +6,6 @@ When trying to send actual emails from your IDE, an error stating Issue binding 
 Once deployed to Heroku, the sending of actual emails will become a possibility, so please wait until then before attempting it.
 
 ## User Stories
+
+## Python files
+
