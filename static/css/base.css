@@ -180,3 +180,13 @@ a.category-badge > span.badge:hover {
         height: calc(100vh - 320px);
     }
 }
+
+@media (max-width: 320px) {
+    .header-container {
+        padding-top:320px;
+    }
+
+    body {
+        height: calc(100vh - 320px);
+    }
+}
