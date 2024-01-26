@@ -17,14 +17,38 @@ Once deployed to Heroku, the sending of actual emails will become a possibility,
 ## Testing User Stories
 |Opportunity/Problem|Evidence of meeting user story|
 |-|
-||
+|1||
+|2||
+|3||
+|4||
+|5||
+|6||
+|7||
+|8||
+|9||
+|10||
+|11||
+|12||
+|13||
+|14||
+|15||
+|16||
+|17||
+|18||
+|19||
+|20||
+|21||
+|22||
+|23||
+|24||
+
 
 ## Validating files
 |Files|Result|
 
+### Python Files
 
-
-## HTML Files
+### HTML Files
 toast_success.html
 toast_info.html
 toast_error.html
@@ -33,9 +57,9 @@ main.nav.html
 mobile-top-header.html
 base.html
 
-## CSS Files
+### CSS Files
 
-## JS Files
+### JS Files
 
 ## Toasts
 |Feature & Expected outcome|Testing|Result|Pass/Fail|
