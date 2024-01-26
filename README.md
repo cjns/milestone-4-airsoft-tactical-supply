@@ -26,7 +26,6 @@ Cons:
 - JavaScript
 - Python
 [- Django](https://www.djangoproject.com/)
-    - [allauth](https://docs.allauth.org/en/latest/)
 
 ## Resources
 - [Unsplash](https://unsplash.com)
@@ -36,3 +35,4 @@ Cons:
 - [Land Warrior Airsoft](https://www.landwarriorairsoft.com/)
 - [Airsoftdirect.uk.com](https://airsoftdirect.uk.com/)
 - [Code Institute Python Linter](https://pep8ci.herokuapp.com/)
+- [Django](https://docs.djangoproject.com/en/3.2)

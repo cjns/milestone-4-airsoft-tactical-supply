@@ -1,3 +1,4 @@
+// Taken from boutique-ado walkthrough project
 document.querySelectorAll('.btt-link').forEach(function(element) {
     element.addEventListener('click', function(e) {
         window.scrollTo(0, 0);
