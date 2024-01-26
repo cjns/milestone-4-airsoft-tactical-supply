@@ -19,19 +19,27 @@ Once deployed to Heroku, the sending of actual emails will become a possibility,
 |-|
 ||
 
-## Python files
-|File|Result|
-|-|-|
-|||
+## Validating files
+|Files|Result|
+
+
 
 ## HTML Files
+toast_success.html
+toast_info.html
+toast_error.html
+toast_warning.html
+main.nav.html
+mobile-top-header.html
+base.html
 
 ## CSS Files
 
 ## JS Files
 
 ## Toasts
-### Success toasts
 |Feature & Expected outcome|Testing|Result|Pass/Fail|
 |-|-|-|-|
-|Success message upon adding item to cart.|Add item to cart|Success message appears|Pass|
+|Toast appears when adding item to cart|Add item to cart|Success message appears|Pass|
+|Toast appears when adding additional item and thus increasing item quantity|Add additional item to cart|Success message appears|Pass|
+|Toast appears when no search criteria added|Search without criteria|Error message appears|Pass|
