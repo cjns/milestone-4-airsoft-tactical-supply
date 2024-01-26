@@ -50,6 +50,11 @@ Once deployed to Heroku, the sending of actual emails will become a possibility,
 ### Python Files
 Checkout - models.py
 Checkout - signals.py
+Checkout - urls.py
+Checkout - views.py
+Checkout - forms.py
+Checkout - apps.py
+Checkout - admin.py
 
 ### HTML Files
 toast_success.html
@@ -59,6 +64,7 @@ toast_warning.html
 main.nav.html
 mobile-top-header.html
 base.html
+checkout - checkout.html
 
 ### CSS Files
 
@@ -70,3 +76,5 @@ base.html
 |Toast appears when adding item to cart|Add item to cart|Success message appears|Pass|
 |Toast appears when adding additional item and thus increasing item quantity|Add additional item to cart|Success message appears|Pass|
 |Toast appears when no search criteria added|Search without criteria|Error message appears|Pass|
+
+## Bugs
