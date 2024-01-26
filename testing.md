@@ -46,7 +46,10 @@ Once deployed to Heroku, the sending of actual emails will become a possibility,
 ## Validating files
 |Files|Result|
 
+
 ### Python Files
+Checkout - models.py
+Checkout - signals.py
 
 ### HTML Files
 toast_success.html
