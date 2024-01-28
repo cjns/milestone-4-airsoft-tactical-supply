@@ -77,4 +77,9 @@ checkout - checkout.html
 |Toast appears when adding additional item and thus increasing item quantity|Add additional item to cart|Success message appears|Pass|
 |Toast appears when no search criteria added|Search without criteria|Error message appears|Pass|
 
+## Webhooks
+account_external_account_created
+payment_intent.succeeded
+payment_intent.payment_failed
+
 ## Bugs
