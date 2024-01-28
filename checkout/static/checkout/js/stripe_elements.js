@@ -43,40 +43,76 @@ let form = document.getElementById('payment-form');
 let submitButton = document.getElementById('submit-button');
 let loadingOverlay = document.getElementById('loading-overlay');
 let cardErrors = document.getElementById('card-errors');
+let idSaveInfo = document.getElementById('id-save-info');
+let csrfTokenInput = document.querySelector('input[name="csrfmiddlewaretoken"]');
 
 form.addEventListener('submit', function(ev) {
     ev.preventDefault();
     card.update({ 'disabled': true });
     submitButton.setAttribute('disabled', true);
-    
-    // Use jQuery only for the fadeToggle effect
     $('#payment-form').fadeToggle(100);
     $('#loading-overlay').fadeToggle(100);
+
+    let saveInfo = idSaveInfo.checked;
+    let csrfToken = csrfTokenInput.value;
     
-    stripe.confirmCardPayment(clientSecret, {
-        payment_method: {
-            card: card,
-        }
-    }).then(function(result) {
-        if (result.error) {
-            // Construct the error message as HTML
-            let html = `
-                <span class="icon" role="alert">
-                <i class="fas fa-times"></i>
-                </span>
-                <span>${result.error.message}</span>`;
-            cardErrors.innerHTML = html;
-            
-            // Use jQuery only for the fadeToggle effect
-            $('#payment-form').fadeToggle(100);
-            $('#loading-overlay').fadeToggle(100);
-            
-            card.update({ 'disabled': false });
-            submitButton.removeAttribute('disabled');
-        } else {
-            if (result.paymentIntent.status === 'succeeded') {
-                form.submit();
+    let postData = {
+        'csrfmiddlewaretoken': csrfToken,
+        'client_secret': clientSecret,
+        'save_info': saveInfo,
+    };
+    let url = '/checkout/cache_checkout_data/';
+
+    // Use jQuery for the AJAX request
+    $.post(url, postData).done(function () {
+        stripe.confirmCardPayment(clientSecret, {
+            payment_method: {
+                card: card,
+                billing_details: {
+                    name: form.full_name.value.trim(),
+                    phone: form.phone_number.value.trim(),
+                    email: form.email.value.trim(),
+                    address:{
+                        line1: form.street_address1.value.trim(),
+                        line2: form.street_address2.value.trim(),
+                        city: form.town_or_city.value.trim(),
+                        country: form.country.value.trim(),
+                        state: form.county.value.trim(),
+                    }
+                }
+            },
+            shipping: {
+                name: form.full_name.value.trim(),
+                phone: form.phone_number.value.trim(),
+                address: {
+                    line1: form.street_address1.value.trim(),
+                    line2: form.street_address2.value.trim(),
+                    city: form.town_or_city.value.trim(),
+                    country: form.country.value.trim(),
+                    postal_code: form.postcode.value.trim(),
+                    state: form.county.value.trim(),
+                }
+            },
+        }).then(function(result) {
+            if (result.error) {
+                const html = `
+                    <span class="icon" role="alert">
+                    <i class="fas fa-times"></i>
+                    </span>
+                    <span>${result.error.message}</span>`;
+                cardErrors.innerHTML = html;
+                $('#payment-form').fadeToggle(100);
+                $('#loading-overlay').fadeToggle(100);
+                card.update({ 'disabled': false });
+                submitButton.removeAttribute('disabled');
+            } else {
+                if (result.paymentIntent.status === 'succeeded') {
+                    form.submit();
+                }
             }
-        }
+        });
+    }).fail(function () {
+        // Just reload the page, the error will be in django messages
+        location.reload();
     });
 });
