@@ -15,33 +15,32 @@ When trying to send actual emails from your IDE, an error stating Issue binding 
 Once deployed to Heroku, the sending of actual emails will become a possibility, so please wait until then before attempting it.
 
 ## Testing User Stories
-|Opportunity/Problem|Evidence of meeting user story|
-|-|
-|1||
-|2||
-|3||
-|4||
-|5||
-|6||
-|7||
-|8||
-|9||
-|10||
-|11||
-|12||
-|13||
-|14||
-|15||
-|16||
-|17||
-|18||
-|19||
-|20||
-|21||
-|22||
-|23||
-|24||
-
+|User Story ID|Opportunity/Problem|Evidence of meeting user story|
+|-|-|-|
+|1|||
+|2|||
+|3|||
+|4|||
+|5|||
+|6|||
+|7|||
+|8|||
+|9|||
+|10|||
+|11|||
+|12|||
+|13|||
+|14|||
+|15|||
+|16|||
+|17|||
+|18|||
+|19|||
+|20|||
+|21|||
+|22|||
+|23|||
+|24|||
 
 ## Validating files
 |Files|Result|

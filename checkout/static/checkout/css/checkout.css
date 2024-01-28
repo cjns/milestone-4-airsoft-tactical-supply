@@ -42,6 +42,16 @@
     border: 0.5px dotted var(--primary-color);
 }
 
+select,
+select option {
+    color: var(--primary-color);
+}
+
+select:invalid,
+select option[value=""] {
+  color: #aab7c4 !important;
+}
+
 #loading-overlay {
 	display: none;
 	position: fixed;
