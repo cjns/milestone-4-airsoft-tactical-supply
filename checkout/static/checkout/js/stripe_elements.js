@@ -38,28 +38,41 @@ card.addEventListener('change', function (event) {
     }
 });
 
-// Handle form submit - Stripe documentation / adopted from boutique ado
+// Handle form submit
 let form = document.getElementById('payment-form');
+let submitButton = document.getElementById('submit-button');
+let loadingOverlay = document.getElementById('loading-overlay');
+let cardErrors = document.getElementById('card-errors');
 
-form.addEventListener('submit', function (ev) {
+form.addEventListener('submit', function(ev) {
     ev.preventDefault();
     card.update({ 'disabled': true });
-    $('#submit-button').attr('disabled', true);
+    submitButton.setAttribute('disabled', true);
+    
+    // Use jQuery only for the fadeToggle effect
+    $('#payment-form').fadeToggle(100);
+    $('#loading-overlay').fadeToggle(100);
+    
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
             card: card,
         }
-    }).then(function (result) {
+    }).then(function(result) {
         if (result.error) {
-            let errorDiv = document.getElementById('card-errors');
+            // Construct the error message as HTML
             let html = `
                 <span class="icon" role="alert">
                 <i class="fas fa-times"></i>
                 </span>
                 <span>${result.error.message}</span>`;
-            $(errorDiv).html(html);
+            cardErrors.innerHTML = html;
+            
+            // Use jQuery only for the fadeToggle effect
+            $('#payment-form').fadeToggle(100);
+            $('#loading-overlay').fadeToggle(100);
+            
             card.update({ 'disabled': false });
-            $('#submit-button').attr('disabled', false);
+            submitButton.removeAttribute('disabled');
         } else {
             if (result.paymentIntent.status === 'succeeded') {
                 form.submit();
