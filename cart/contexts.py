@@ -27,7 +27,7 @@ def cart_contents(request):
             Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total_cost
 
-    total_cost_with_delivery = delivery + total_cost
+    grand_total = delivery + total_cost
 
     context = {
         'cart_items': cart_items,
@@ -36,7 +36,7 @@ def cart_contents(request):
         'delivery': delivery,
         'free_delivery_delta': free_delivery_delta,
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
-        'total_cost_with_delivery': total_cost_with_delivery,
+        'grand_total': grand_total,
     }
 
     return context

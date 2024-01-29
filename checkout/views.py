@@ -86,7 +86,7 @@ def checkout(request):
             return redirect(reverse('products'))
         
         current_cart = cart_contents(request)
-        total = current_cart['total_cost_with_delivery']
+        total = current_cart['grand_total']
         stripe_total = round(total * 100)
         stripe_api_key = stripe_secret_key
 
@@ -162,8 +162,8 @@ def checkout_success(request, order_number):
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
 
-    if 'bag' in request.session:
-        del request.session['bag']
+    if 'cart' in request.session:
+        del request.session['cart']
 
     template = 'checkout/checkout_success.html'
     context = {
