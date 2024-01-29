@@ -94,5 +94,6 @@ Confirmation email on purchase
 |Edit product information|Updated fields for an existing product|Information updated|Pass|
 |Delete product|Delete an existing product|Product deleted|Pass|
 
-## Bugs
-Once deployed, selecting the accessories product from the django admin returns a Bad Request(400).
+## Unsolved Bugs
+- Once deployed, selecting the accessories product from the django admin returns a Bad Request(400).
+- Background not showing on home page.
