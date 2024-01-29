@@ -1,1 +1,1 @@
-web: gunicorn airsoft-tactical-supply.wsgi:application
+web: gunicorn airsoft_tactical_supply.wsgi:application
