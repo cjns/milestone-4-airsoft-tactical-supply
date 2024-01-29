@@ -1,0 +1,1 @@
+web: gunicorn milestone-4-airsoft-tactical-supply.wsgi:application

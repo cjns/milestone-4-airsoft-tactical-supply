@@ -83,4 +83,37 @@ Cons:
 - [Code Institute Python Linter](https://pep8ci.herokuapp.com/)
 - [Django](https://docs.djangoproject.com/en/3.2)
 
-## Deployment
+## Deployment & Local Development
+VSCode and Github Desktop were used for local development and pushing code to GitHub.
+### GitHub
+### Steps for Forking the Github Repository
+1. Log into GitHub.
+2. Go to the Kartilo repository.
+3. Select the 'Fork' button in the top right corner under your profile icon.
+### Steps for Making a Local Clone
+1. Log into GitHub.
+2. Navigate to the repository you want to clone.
+3. Select the '<> Code' and copy the link for your preferred method of cloning the site.
+4. Use your terminal to navigate to the working directory you want use.
+5. Type git clone into the terminal and paste the link you copied in step 3 and press enter.
+### Database: Elephant SQL
+1. Log/sign into Elephant SQL.
+2. Create a new team.
+3. Create new instance.
+4. Select your required plan.
+5. Select your region/closest data center.
+6. Review your details and create the instance.
+7. Return to the dashboard, click the database instance you have created, and store the database URL.
+### Heroku
+1. Login into Heroku.
+2. Create and name a new app.
+3. Enter settings, reveal and populate the config vars.
+4. Click Deploy and select a deployment method of your choosing.
+5. Click 'More' and run the console.
+6. Type 'python' in the console and click 'run'.
+7. Enter the following into the termainl.
+   - from <yourappname> import app, db
+   - app.app_context().push()
+   - db.create_all()
+8. Exit the terminals with 'exit()'.
+9. Click 'Open app' to view your app.
