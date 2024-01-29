@@ -92,8 +92,51 @@ By following this plan, I can develop a website that meets the needs of both the
 - Email Confirmations: Emails sent to users after they register or complete a purchase, providing a record of these actions.
 
 ## Database & Models
-### Checkout models
-### Products models
+### ERD Components
+
+
+## Future Implementations
+- Increasing the product options.
+- Adding additional manufacturers.
+- Configuring email confirmations.
+
+## Success Metrics
+The following metrics can be measured to track the website's success:
+
+Google Analytics: This tool can provide a wealth of data about your website's users, including how they find your website, which pages they visit, how long they stay, and much more. This can help you understand what's working well and what might need improvement.
+Search Engine Listings: The position of your website in search engine results can be a good indicator of its visibility and reach. Tools like Google Search Console can provide insights into your website's search engine performance.
+Meta Descriptions and Titles: These are important for SEO and can influence click-through rates from search engine results. They should be descriptive and enticing, effectively summarizing the content of each page.
+User Feedback: Direct feedback from users can be invaluable in assessing the website's success. This could be collected through surveys, contact form submissions, or social media interactions.
+Conversion Rates: If your website has specific goals (like form submissions, sign-ups, or purchases), tracking the conversion rates for these actions can provide a clear measure of success.
+Page Load Times: Fast-loading pages provide a better user experience and are favored by search engines. Tools like Google's Lighthouse can help you measure and optimize your load times.
+Accessibility: Ensuring your website is accessible to all users, including those with disabilities, is not only a legal requirement in some instances but also improves your website's usability and reach. Tools like the WAVE Web Accessibility Evaluation Tool can help assess your website's accessibility.
+
+## Accessibility
+Use semantic HTML: Semantic HTML elements provide important context about the content they contain, which can greatly enhance the experience for users of assistive technologies like screen readers.
+Ensure sufficient colour contrast: This is crucial for visually impaired users or those with color blindness. Tools like the WebAIM Color Contrast Checker can help verify that your color choices meet the recommended contrast ratios.
+Provide information for screen readers where appropriate (e.g. aria-labels): ARIA labels and other ARIA roles can provide additional context and improve navigation for screen reader users.
+Descriptive Link Text: Make sure all links have descriptive text (avoid text like "click here"). Screen reader users often navigate by tabbing through links, so descriptive link text is crucial.
+
+## Sitemap
+- Home
+   - All Products
+      - By Price
+      - By Manufacturer
+      - By Category
+      - All Products
+   - Airsoft Guns
+      - Pistols
+      - Shotguns
+      - Submachine Guns
+      - Rifles
+      - Sniper Rifles
+      - Launchers
+      - All Airsoft Guns
+- My Account
+   - Product Management
+   - My Profile
+   - Login/Logout
+- Cart
 
 ## Styling
 ### Fonts

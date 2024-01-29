@@ -15,58 +15,55 @@ When trying to send actual emails from your IDE, an error stating Issue binding 
 Once deployed to Heroku, the sending of actual emails will become a possibility, so please wait until then before attempting it.
 
 ## Testing User Stories
-|User Story ID|Opportunity/Problem|Evidence of meeting user story|
-|-|-|-|
-|1|||
-|2|||
-|3|||
-|4|||
-|5|||
-|6|||
-|7|||
-|8|||
-|9|||
-|10|||
-|11|||
-|12|||
-|13|||
-|14|||
-|15|||
-|16|||
-|17|||
-|18|||
-|19|||
-|20|||
-|21|||
-|22|||
-|23|||
-|24|||
+## User Stories
+### Viewing & Navigation
+| User Story ID | As a/an | I want to be able to...                         | Evidence of meeting user story |
+| ------------- | ------- | ----------------------------------------------- | --------------------------------------------------------------------------------------|
+| 1             | Shopper | View a list of products                         | A link that displays all product |
+| 2             | Shopper | View product categories                         | A link that displays products by category|
+| 3             | Shopper | View details & specifications for each product  | A link that displays products by price |
+| 4             | Shopper | View the total of my purchases at any time      | Access to cart |
 
-## Validating files
-|Files|Result|
+### Registration & User Accounts
+| User Story ID | As a/an   | I want to be able to...                         | Evidence of meeting user story                   |
+| ------------- | --------- | ----------------------------------------------- | --------------------------------------------------------------------------------------- |
+| 5             | Site User | Register for an account                         | Registration page                                             |
+| 6             | Site User | Login or logout                                 | Login/logout functionality                                                  |
+| 7             | Site User | Recover my password                             | Future implementation (set up email functionality)                                             |
+| 8             | Site User | Receive an email confirmation after registering | Future implementation (set up email functionality)                                      |
+| 9             | Site User | Have a user profile                             | User profile present |
 
+### Sorting & Searching
+| User Story ID | As a/an | I want to be able to...                             | Evidence of meeting user |
+| ------------- | ------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| 10            | Shopper | Sort the list of available products                 | Sorting implemented                                |
+| 11            | Shopper | Sort a specific product category                    | Categorical listing implemented |
+| 12            | Shopper | Sort multiple categories of products simultaneously | Ability to list all categories      |
+| 13            | Shopper | Search by product name or description               | Search feature implemented                                               |
+| 14            | Shopper | See search results and the number of results        | Implemented on product search page                                     |
 
+### Purchasing & Checkout
+| User Story ID | As a/an | I want to be able to...                                     | Evidence of meeting user story        |
+| ------------- | ------- | ----------------------------------------------------------- | ----------------------------------------------------|
+| 15            | Shopper | Select the product quantity                                 | Ability to update cart      |
+| 16            | Shopper | View the items in my cart                                   | Cart feature implemented                             |
+| 17            | Shopper | Adjust the quantity of individual cart items                | Item quantity can be increased/decreased      |
+| 18            | Shopper | Enter my payment information                                | Implemented via Stripe                             |
+| 19            | Shopper | Feel my personal and payment information is safe and secure | Authentication implemented |
+| 20            | Shopper | View a confirmation order                                   | Confirmation order shown after purchase              |
+| 21            | Shopper | Receive an email confirmation once checkout is complete     | Future implementation (set up email functionality)                                   |
+
+### Admin & Store Management
+| User Story ID | As a/an     | I want to be able to... | Evidence of meeting user story              |
+| ------------- | ----------- | ----------------------- | ---------------------------|
+| 22            | Store Owner | Add products            | Add to cart feature              |
+| 23            | Store Owner | Edit/Update a product   | Store owner can edit/update products |
+| 24            | Store Owner | Delete a product        | Ability to remove items             |
+
+## File Validation
 ### Python Files
-Checkout - models.py
-Checkout - signals.py
-Checkout - urls.py
-Checkout - views.py
-Checkout - forms.py
-Checkout - apps.py
-Checkout - admin.py
-
 ### HTML Files
-toast_success.html
-toast_info.html
-toast_error.html
-toast_warning.html
-main.nav.html
-mobile-top-header.html
-base.html
-checkout - checkout.html
-
 ### CSS Files
-
 ### JS Files
 
 ## Toasts
@@ -77,16 +74,12 @@ checkout - checkout.html
 |Toast appears when no search criteria added|Search without criteria|Error message appears|Pass|
 
 ## Webhooks
-account_external_account_created
-payment_intent.succeeded
-payment_intent.payment_failed
-
 ## Forms
+
 ### My Profile Form - pass
-
 ### Registration Form - pass
-
 ### Checkout Form - pass
+
 |Feature & Expected outcome|Testing|Result|Pass/Fail|
 |-|-|-|-|
 |Checkbox that saves the delivery into to your profile|Place order, tick checkbox, and check profile info|Info. is updated|Pass|
@@ -102,3 +95,4 @@ Confirmation email on purchase
 |Delete product|Delete an existing product|Product deleted|Pass|
 
 ## Bugs
+Once deployed, selecting the accessories product from the django admin returns a Bad Request(400).
