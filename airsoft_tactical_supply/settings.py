@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-a00aoz64%!2toqy%l(oqkndwip*4(u3i-3b+hpq4h+vbek2fa9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['airsoft-tactical-supply', 'localhost']
+ALLOWED_HOSTS = ['airsoft-tactical-supply-381d5130c2b6.herokuapp.com', 'localhost']
 
 
 # Application definition
