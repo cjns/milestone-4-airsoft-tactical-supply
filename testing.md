@@ -91,7 +91,7 @@ payment_intent.payment_failed
 |-|-|-|-|
 |Checkbox that saves the delivery into to your profile|Place order, tick checkbox, and check profile info|Info. is updated|Pass|
 |Webhook handles profiles if form submission fails|Comment out form submission code in stripe_elements.js and submit order|Order is still processed|Pass|
-
+Confirmation email on purchase
 
 
 ## Bugs
