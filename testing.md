@@ -93,5 +93,11 @@ payment_intent.payment_failed
 |Webhook handles profiles if form submission fails|Comment out form submission code in stripe_elements.js and submit order|Order is still processed|Pass|
 Confirmation email on purchase
 
+## Product Management
+|Feature & Expected outcome|Testing|Result|Pass/Fail|
+|-|-|-|-|
+|Add product with image|Add product with image|Product is added|Pass|
+|Add product without image|Add product without image|Product is added|Pass|
+
 
 ## Bugs
