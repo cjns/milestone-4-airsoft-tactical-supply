@@ -82,6 +82,7 @@ Cons:
 - [Airsoftdirect.uk.com](https://airsoftdirect.uk.com/)
 - [Code Institute Python Linter](https://pep8ci.herokuapp.com/)
 - [Django](https://docs.djangoproject.com/en/3.2)
+- [miniWebtool django secret key generator](https://miniwebtool.com/django-secret-key-generator/)
 
 ## Deployment & Local Development
 VSCode and Github Desktop were used for local development and pushing code to GitHub.
