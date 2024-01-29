@@ -99,5 +99,6 @@ Confirmation email on purchase
 |Add product with image|Add product with image|Product is added|Pass|
 |Add product without image|Add product without image|Product is added|Pass|
 |Edit product information|Updated fields for an existing product|Information updated|Pass|
+|Delete product|Delete an existing product|Product deleted|Pass|
 
 ## Bugs
