@@ -1,0 +1,21 @@
+:root {
+    --my-profile-form: #aab7c4;
+    --my-profile-country: #000;
+}
+
+#profile-update-form .form-control {
+    color: var(--my-profile-country);
+}
+
+#profile-update-form input::placeholder {
+    color: var(--my-profile-form);
+}
+
+#id_default_country,
+#id_default_country option:not(:first-child) {
+    color: var(--my-profile-country);
+}
+
+#id_default_country option:first-child {
+    color: var(--my-profile-form);
+}

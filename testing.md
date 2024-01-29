@@ -81,4 +81,8 @@ account_external_account_created
 payment_intent.succeeded
 payment_intent.payment_failed
 
+## Forms
+### My Profile Form
+### Registration Form
+
 ## Bugs
