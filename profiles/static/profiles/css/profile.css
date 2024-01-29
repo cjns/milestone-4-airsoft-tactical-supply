@@ -3,6 +3,11 @@
     --my-profile-country: #000;
 }
 
+.order-history {
+    max-height: 416px; /* Height of form + submit button*/
+    overflow-y: auto;
+}
+
 #profile-update-form .form-control {
     color: var(--my-profile-country);
 }

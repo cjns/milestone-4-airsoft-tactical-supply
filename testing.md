@@ -82,7 +82,14 @@ payment_intent.succeeded
 payment_intent.payment_failed
 
 ## Forms
-### My Profile Form
-### Registration Form
+### My Profile Form - pass
+
+### Registration Form - pass
+
+### Checkout Form - pass
+|Feature & Expected outcome|Testing|Result|Pass/Fail|
+|-|-|-|-|
+|Checkbox that saves the delivery into to your profile|Place order, tick checkbox, and check profile info|Info. is updated|Pass|
+
 
 ## Bugs
