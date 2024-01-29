@@ -1,4 +1,35 @@
 # Milestone 4: Airsoft Tactical Supply
+## Rationale
+This website is designed to provide a seamless and secure shopping experience for airsoft enthusiasts. It aims to cater to both casual shoppers and registered users, offering a wide range of airsoft rifles and related products.
+
+For viewing and navigation, the website provides a clear list of products and categories, allowing users to quickly find the products they're interested in. Detailed product information, including price, description, and specifications, are readily available. Users can also view their total purchases at any time to manage their spending.
+
+The website also offers registration and user account functionalities. Users can register for an account, log in or out, recover their password, and receive email confirmations after registration. Registered users have access to a user profile where they can view their order history and save their payment information.
+
+To further enhance the shopping experience, the website provides sorting and searching features. Users can sort products by price or category, search for products by name or description, and view search results along with the number of results.
+
+The purchasing and checkout process is designed to be straightforward and secure. Users can select product quantities, view items in their cart, adjust quantities of cart items, and enter their payment information securely. After checkout, users can view a confirmation order and receive an email confirmation.
+
+For the store owner, the website provides functionalities to add, edit, or delete products, allowing for efficient store management.
+
+In summary, this website aims to provide a comprehensive, user-friendly, and secure online shopping platform for airsoft rifles and related products.
+
+## Development Plan
+Requirements Gathering: Understand the needs of the users and the products that will be sold on the website. This includes details about the airsoft rifles and related products, as well as user information for account creation and order tracking.
+
+Database Design: Design a database schema that accurately represents the products to be sold and the user data to be collected. This will involve defining tables for users, products, and orders, and establishing relationships between them.
+
+User Interface Design: Design a user-friendly interface for users to register, log in, view products, add them to their cart, and checkout. The design should be intuitive and accessible to users of all ages and levels of technical proficiency.
+
+Backend Development: Implement the server-side logic to handle user registration, login, product viewing, cart management, and order checkout. This includes validating and storing the data in the database, managing user sessions, and handling payment processing.
+
+Frontend Development: Implement the client-side logic to interact with the backend, display products to the user, manage the shopping cart, and provide a smooth user experience.
+
+Testing: Conduct thorough testing to ensure the website works as expected and handles edge cases gracefully. This includes testing the user registration, login, product viewing, cart management, and checkout processes.
+
+Deployment: Deploy the website to a production environment and set up any necessary infrastructure, such as a database server and web server.
+
+By following this plan, I can develop a website that meets the needs of both the airsoft enthusiasts who will be shopping on the site and the store owner who will be managing the products.
 
 ## User Stories
 ### Viewing & Navigation
@@ -45,7 +76,22 @@
 | 23            | Store Owner | Edit/Update a product   | Change product information |
 | 24            | Store Owner | Delete a product        | Remove items               |
 
-## Data Models
+## Features
+- Home Page: An introductory page with featured products and categories. This addresses the need to understand the site's purpose and see a selection of products immediately.
+- Product Viewing Page: A page where users can view all available products, addressing the need to browse the inventory.
+- Product Detail Page: A page where users can view detailed information about a specific product, addressing the need to learn more about a product before purchasing.
+- Cart Page: A page where users can view the items in their cart, adjust quantities, and proceed to checkout, addressing the need to manage their intended purchases.
+- Checkout Page: A page where users can enter their payment information and complete their purchase, addressing the need to securely pay for their selected items.
+- Account Registration Page: A page where users can register for an account, addressing the need for users to create their own accounts.
+- Login Page: A page where users can log in to their accounts, addressing the need for users to access their accounts.
+- Logout Functionality: A feature allowing users to log out of their accounts, addressing the need for users to securely end their sessions.
+- Search Functionality: A feature allowing users to search for products by name or description, addressing the need to find specific products quickly.
+- Product Sorting Functionality: A feature allowing users to sort products by price or category, addressing the need to organize the product view based on personal preferences.
+- Admin Product Management Page: A page where the store owner can add, edit, or delete products, addressing the need for efficient store management.
+- Confirmation Alerts: Alerts that confirm when a user has registered, logged in, added items to their cart, or completed a purchase.
+- Email Confirmations: Emails sent to users after they register or complete a purchase, providing a record of these actions.
+
+## Database & Models
 ### Checkout models
 ### Products models
 
